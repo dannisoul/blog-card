@@ -1,0 +1,129 @@
+:root{
+    --yellow: #F4D04E;
+    --gray-950: #111111;
+    --gray-500: #6B6B6B;
+    --white: #FFFFFF;
+}
+
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Figtree';
+    src: url(../assets/fonts/Figtree-VariableFont_wght.ttf) format('truetype');
+    font-weight: 500 900;
+}
+
+body{
+    background-color: var(--yellow);
+    font-family: 'Figtree';
+    display: grid;
+    place-content: center;
+    padding: 1.5rem;
+    min-height: 100vh;
+}
+
+.card{
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-radius: 20px;
+    max-width: 384px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    border: solid var(--gray-950) thin;
+    position: relative;
+    box-shadow: var(--gray-950) 8px 8px 0;
+}
+
+.card .article-body{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    .tag{
+        background-color: var(--yellow);
+        padding: .25rem .75rem;
+        width: fit-content;
+        border-radius: 4px;
+        font-weight: 900;
+        font-size: 14px;
+        line-height: 150%;
+        letter-spacing: 0px;
+    }
+
+    .date{
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 150%;
+        letter-spacing: 0px;
+    }
+
+    h1{
+        font-weight: 900;
+        font-size: 24px;
+        line-height: 150%;
+        letter-spacing: 0px;
+        color: var(--gray-950);
+    }
+
+    .text{
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: 0px;
+        color: var(--gray-500);
+    }
+}
+
+.card .article-footer{
+
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+
+    .avatar{
+        width: 32px;
+    }
+
+    .fullname{
+        font-weight: 900;
+        font-size: 14px;
+        line-height: 150%;
+        letter-spacing: 0px;
+    }
+}
+
+.card .article-header img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+@media (width < 576px){
+
+    .card .article-body{
+
+        .tag{
+            font-size: 12px;
+        }
+
+        .date{
+            font-size: 12px;
+        }
+
+        .title{
+            font-size: 20px;
+        }
+
+        .text{
+            font-size: 14px;
+        }
+
+        
+    } 
+}
